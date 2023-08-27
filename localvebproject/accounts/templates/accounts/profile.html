@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>profile</title>
+</head>
+<body>
+    <div>
+        <h1>
+            Ваш логин:
+        </h1>
+        <p>{{user.username}}</p>
+        <h2>
+            Курс валют:
+        </h2>
+        <ul>
+            {% for exrate in exchange_rates %}
+            <li>{{exrate.exchange_rate.rate}}-{{exrate.exchange_rate.currency_pair}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+</body>
+</html>
